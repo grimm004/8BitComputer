@@ -15,6 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="8BitComputer.ino" />
+    <None Include="Testing.ino" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.Testing.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

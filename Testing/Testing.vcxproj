@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C5F80730-F44F-4478-BDAE-6634EFC2CA88}</ProjectGuid>
-    <RootNamespace>_8BitComputer</RootNamespace>
-    <ProjectName>8BitComputer</ProjectName>
+    <ProjectGuid>{AB2FD05B-5EB1-474B-A873-6723B689419C}</ProjectGuid>
+    <RootNamespace>Testing</RootNamespace>
+    <ProjectName>Testing</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -66,8 +66,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\8BitComputer;$(ProjectDir)..\..\..\..\..\..\Program Files (x86)\Arduino\libraries;$(ProjectDir)..\..\..\Arduino\libraries;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\hardware\avr\1.6.21\libraries;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\hardware\avr\1.6.21\cores\arduino;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\hardware\avr\1.6.21\variants\eightanaloginputs;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.9.2-atmel3.5.4-arduino2\avr\include;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.9.2-atmel3.5.4-arduino2\avr\include\avr;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.9.2-atmel3.5.4-arduino2\lib\gcc\avr\4.8.1\include;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.9.2-atmel3.5.4-arduino2\lib\gcc\avr\4.9.2\include;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.9.2-atmel3.5.4-arduino2\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>$(ProjectDir)__vm\.8BitComputer.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Testing;$(ProjectDir)..\..\..\..\..\..\..\Program Files (x86)\Arduino\libraries;$(ProjectDir)..\..\..\..\Arduino\libraries;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\hardware\avr\1.6.21\libraries;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\hardware\avr\1.6.21\cores\arduino;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\hardware\avr\1.6.21\variants\eightanaloginputs;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.9.2-atmel3.5.4-arduino2\avr\include;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.9.2-atmel3.5.4-arduino2\avr\include\avr;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.9.2-atmel3.5.4-arduino2\lib\gcc\avr\4.8.1\include;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.9.2-atmel3.5.4-arduino2\lib\gcc\avr\4.9.2\include;C:\Users\Max Grimmett\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.9.2-atmel3.5.4-arduino2\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.Testing.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;F_CPU=16000000L;ARDUINO=10805;ARDUINO_AVR_NANO;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -96,14 +96,19 @@
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="8BitComputer.ino">
+    <None Include="Testing.ino">
       <FileType>CppCode</FileType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="__vm\.8BitComputer.vsarduino.h" />
+    <ClInclude Include="__vm\.Testing.vsarduino.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties arduino.upload.port="COM4" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
