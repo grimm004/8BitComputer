@@ -111,30 +111,43 @@ void setup() {
 	byte negitive =
 		0b10000000; // -
 
-	int displayOffsets[] = {
-		0b00110000000000,
-		0b00100000000000,
-		0b00010000000000,
-		0b00000000000000
-	};
+	//int displayOffsets[] = {
+		//0b00110000000000,
+		//0b00100000000000,
+		//0b00010000000000,
+		//0b00000000000000
+	//};
+
+  // Reversed as hardware only works if the 'wrong' way around
+  int displayOffsets[] = {
+    0b00000000000000,
+    0b00010000000000,
+    0b00100000000000,
+    0b00110000000000
+  };
 
 	int offset;
 
 	// Hexadecimal
-	Serial.println("Writing hexadeximal...");
-	offset = 0b00000000000000;
+	Serial.println("Writing hexadecimal...");
+  // Switched with Decimal offset as required by hardware
+	offset = 0b01000000000000;
 
-	for (int i = 0; i < 2; i++)
+  // Display for all four digits to enable 16 bit output
+  // For 8 bits we will simply clear the registers then load the 8 bit value into the least significant register
+  // This will leave the most signifcant bits as 00 achieveing the same goal as the second nested for loop
+	for (int i = 0; i < 4; i++)
 		for (int value = 0; value < 256; value++)
 			writeEEPROM(value + offset + displayOffsets[i], digits[(value / pow(16, i)) % 16]);
 
-	for (int i = 2; i < 4; i++)
-		for (int value = 0; value < 256; value++)
-			writeEEPROM(value + offset + displayOffsets[i], 0b00000000);
+	//for (int i = 0; i < 2; i++)
+		//for (int value = 0; value < 256; value++)
+			//writeEEPROM(value + offset + displayOffsets[i+2], 0b00000000);
 
 	// Decimal
-	Serial.println("Writing deximal...");
-	offset = 0b01000000000000;
+	Serial.println("Writing decimal...");
+  // Switched with Hexadecimal as required
+	offset = 0b00000000000000;
 
 	for (int i = 0; i < 3; i++)
 		for (int value = 0; value < 256; value++)
